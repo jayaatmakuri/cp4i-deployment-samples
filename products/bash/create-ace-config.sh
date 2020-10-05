@@ -83,12 +83,12 @@ echo "INFO: Creating default.policyxml"
 cat << EOF > ${CURRENT_DIR}/DefaultPolicies/default.policyxml
 <?xml version="1.0" encoding="UTF-8"?>
 <policies>
-  <policy policyType="MQEndpoint" policyName="MQEndpointPolicy" policyTemplate="MQEndpoint">
+  <policy policyType="MQEndpoint" policyName="mq" policyTemplate="MQEndpoint">
     <connection>CLIENT</connection>
-    <destinationQueueManagerName>QUICKSTART</destinationQueueManagerName>
-    <queueManagerHostname>mq-ddd-qm-ibm-mq</queueManagerHostname>
-    <listenerPortNumber>9443</listenerPortNumber>
-    <channelName>ACE_SVRCONN</channelName>
+    <destinationQueueManagerName>mtlsqm</destinationQueueManagerName>
+    <queueManagerHostname>mtlsqm-ibm-mq</queueManagerHostname>
+    <listenerPortNumber>1414</listenerPortNumber>
+    <channelName>MTLSQMCHL</channelName>
     <securityIdentity></securityIdentity>
     <useSSL>true</useSSL>
     <SSLPeerName></SSLPeerName>
